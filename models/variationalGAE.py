@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from torch_geometric.nn import GCNConv, Linear
+from torch_geometric.nn import GCNConv, Linear, NegativeSampler
 from torch.utils.data import DataLoader
 from torch_geometric.loader import DataLoader, DataListLoader
 import IPython.display
@@ -161,7 +161,13 @@ def init_model(num_nf, num_hidden_channels, latent_dims, loader):
 
 ## TODO: init BatchData with an index range instead to allow 80 20 train-test split
 
-loader_train = DataLoader(BatchData(0,8), batch_size=64, pin_memory=True, num_workers=4)
+negative_sampler = NegativeSampling(
+    edge_index=to_undirected(dataset[0].edge_index),
+    num_nodes=dataset[0].num_nodes,
+    num_neg_samples=1
+)
+
+loader_train = DataLoader(BatchData(0,8), batch_size=64, sampler=negative_sampler, pin_memory=True, num_workers=4)
 print("Train Set Batch Count:", len(loader_train))
 displayStats(loader=loader_train)
 loader_test = DataLoader(BatchData(8,10), batch_size=16, pin_memory=True, num_workers=4)
