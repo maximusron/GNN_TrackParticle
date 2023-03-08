@@ -229,14 +229,22 @@ This should help the model generalize better.
 
 ### Guide:
 
-All my experiments are stored with outputs in the notebooks folder. The models folder conatins the vgae since it performed the best, althoug I was not able to convert it into a model plugin for the [gnn_tracking repository](https://github.com/gnn-tracking/gnn_tracking)
+All my experiments are stored with outputs in the notebooks folder. 
+
+ The models folder conatins the vgae since it performed the best, although I was not able to convert it into a model plugin for the [gnn_tracking repository](https://github.com/gnn-tracking/gnn_tracking)
 
 Finally the links:
 
 https://www.researchgate.net/figure/a-Architecture-of-the-variational-graph-auto-encoder-VGAE-the-first-part-of_fig2_343526318
+ 
 https://arxiv.org/pdf/1611.07308.pdf
+ 
 https://arxiv.org/pdf/1902.07987.pdf
+ 
 https://arxiv.org/pdf/2103.11414.pdf
+ 
 https://arxiv.org/abs/1901.01343
+ 
 https://graph-neural-networks.github.io/static/file/chapter10.pdf
+ 
 https://indico.cern.ch/event/955026/contributions/4012924/attachments/2127589/3582355/IRIS-Topical_GNN_Tracking.pdf
