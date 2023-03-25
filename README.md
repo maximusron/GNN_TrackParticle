@@ -1,3 +1,5 @@
+My solutions and submission to the qualification task of the GSoC 2023 “GNN Tracking”project, under CERN, IRIS-HEP
+
 My initial approach to classifying whether the edges exist or not is to construct a basic model that uses a batch of graphs.
 I will start all the utils required to set up a framework to develop the architecture further.
 
